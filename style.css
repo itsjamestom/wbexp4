@@ -1,0 +1,233 @@
+/* General Body and Main Landing Page Container */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    /* Background image for the landing page [cite: 2] */
+    background-image: url('images/background.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-illustration{
+    width: 55%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-illustration img{
+    max-width: 100%;
+    height: auto;
+    display: ;
+}
+
+/* Header and Navigation Bar Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Position the navigation bar as fixed [cite: 2] */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.logo-title h1 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Horizontal Navigation Bar Styles [cite: 2] */
+.horizontal-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.horizontal-nav li {
+    margin-left: 20px;
+}
+
+.horizontal-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px; /* Rounded Borders */
+}
+
+/* Hover Effects and Focus Pseudo-classes [cite: 8, 4] */
+.horizontal-nav a:hover,
+.horizontal-nav a:focus {
+    background-color: #f0f0f0;
+    color: #4CAF50;
+}
+
+.horizontal-nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Login Form Styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; /* Offset for the fixed header */
+    box-sizing: border-box;
+}
+
+.login-container {
+    /* Position the box using relative or absolute [cite: 2] */
+    position: relative; 
+    width: 900px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px; /* Rounded Borders */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Box-shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-form {
+    padding: 40px;
+    width: 45%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Focus Pseudo-class for form inputs [cite: 8, 4] */
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFC107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Pseudo-class for button [cite: 8, 4] */
+.submit-btn:hover {
+    background-color: #FFA000;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .login-container {
+        width: 80%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .horizontal-nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .horizontal-nav ul {
+        justify-content: center;
+    }
+
+    .login-container {
+        width: 90%;
+    }
+}

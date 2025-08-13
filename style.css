@@ -14,28 +14,13 @@ body {
     width: 100%;
 }
 
-.login-illustration{
-    width: 55%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-illustration img{
-    max-width: 100%;
-    height: auto;
-    display: ;
-}
-
 /* Header and Navigation Bar Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -62,7 +47,7 @@ header {
     color: #333;
 }
 
-/* Horizontal Navigation Bar Styles [cite: 2] */
+/* Horizontal Navigation Bar Styles */
 .horizontal-nav ul {
     list-style: none;
     margin: 0;
@@ -80,10 +65,10 @@ header {
     font-weight: bold;
     padding: 10px 15px;
     transition: all 0.3s ease;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
-/* Hover Effects and Focus Pseudo-classes [cite: 8, 4] */
+/* Hover Effects and Focus Pseudo-classes */
 .horizontal-nav a:hover,
 .horizontal-nav a:focus {
     background-color: #f0f0f0;
@@ -101,19 +86,18 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 60px; 
+    padding-top: 60px;
     box-sizing: border-box;
 }
 
 .login-container {
-    /* Position the box using relative or absolute */
-    position: relative; 
+    position: relative;
     width: 900px;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px; 
+    border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    display: flex;
+    display: flex; /* This is the key property for side-by-side layout */
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
@@ -121,7 +105,7 @@ main {
 
 .login-form {
     padding: 40px;
-    width: 45%;
+    width: 45%; /* Adjusted width to make space for the illustration */
     box-sizing: border-box;
     text-align: center;
 }
@@ -153,7 +137,7 @@ main {
     transition: all 0.3s ease;
 }
 
-/* Focus Pseudo-class for form inputs [cite: 8, 4] */
+/* Focus Pseudo-class for form inputs */
 .form-group input:focus {
     outline: none;
     border-color: #4CAF50;
@@ -190,9 +174,25 @@ main {
     transition: background-color 0.3s ease;
 }
 
-/* Hover Pseudo-class for button [cite: 8, 4] */
+/* Hover Pseudo-class for button */
 .submit-btn:hover {
     background-color: #FFA000;
+}
+
+/* New/Corrected CSS for the login illustration */
+.login-illustration {
+    width: 55%; /* Takes up the remaining space */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-illustration img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Fixed a missing value here */
 }
 
 /* Responsive Design */
@@ -206,6 +206,11 @@ main {
     .login-form {
         width: 100%;
         padding: 20px;
+    }
+
+    .login-illustration {
+        width: 100%;
+        display: none; /* Hides the illustration on smaller screens for better layout */
     }
 }
 
